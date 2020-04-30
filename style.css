@@ -10,7 +10,7 @@ body{
      justify-content: center;
      flex-direction:column;
      align-items: center;
-     background: linear-gradient(rgb(47,150,163), rgb(48,52,143));
+     background: linear-gradient(rgb(2, 6, 7), rgb(48,52,143));
      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
      color:white;
 }
