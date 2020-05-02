@@ -12,7 +12,7 @@ body{
      justify-content: center;
      flex-direction:column;
      align-items: center;
-     background: linear-gradient(rgb(2, 6, 7), rgb(48,52,143));
+     background: linear-gradient(rgb(59, 162, 247), rgb(74, 223, 216),rgb(60, 168, 218),rgb(9, 66, 223),rgb(72, 26, 131),rgb(5, 14, 54));
      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
      color:white;
 }
@@ -31,7 +31,7 @@ body{
      width:100px;
 }
 .location-timezone{
-     padding-left:50px;
+     padding-left:0px;
 }
 .exact-location,icon1{
      padding-top:20px;
@@ -42,11 +42,17 @@ body{
 }
 
 .degree-section{
+     padding-top:40px;
+     padding-left:40px;
      display:flex;
      align-items: center;
      cursor:pointer;
 }
-
+.temperature-description
+{
+     padding-top:0px;
+     padding-left: 40px;
+}
 .degree-section span{
      margin:10px;
      font-size: 30px;
