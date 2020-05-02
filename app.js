@@ -18,11 +18,12 @@ window.addEventListener('load',()=>{
                })
                .then(data =>{
                     console.log(data);
-                    const {temp}= data.main;
+                    const temp= data.main.temp;
+                    const loc = data.name;
 
                     //set DOM elements from api
                     temperatureDegree.textContent = temp;
-
+                    locationTimezone.textContent = loc;
                });
           });
      }
