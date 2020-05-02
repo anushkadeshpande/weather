@@ -8,8 +8,8 @@ window.addEventListener('load',()=>{
                lat = position.coords.latitude;
 
                //console.log(lat,long);
-               const proxy = "https://cors-anywhere.herokuapp.com/";
-               const api = '${proxy}https://api.darksky.net/forecast/fd9d9c6418c23d94745b836767721ad1/${lat},${long}';
+               const proxy = 'https://cors-anywhere.herokuapp.com/';
+               const api = '${proxy}api.openweathermap.org/data/2.5/weather?lat=${lati}&lon=${long}&appid=cf3aa3fa484d8f88b76c34b064eb484f';
           
                fetch(api)
                .then(response =>{
