@@ -1,6 +1,6 @@
 *{
      margin:0;
-     padding: 0;
+     padding-left: 0px;
      box-sizing: border-box;
 }
 /* Center the loader */
@@ -12,6 +12,7 @@
      width: 150px;
      height: 150px;
      margin: -75px 0 0 -75px;
+     padding :10px;
      border: 16px solid #f3f3f3;
      border-radius: 50%;
      border-top: 16px solid #3498db;
@@ -52,7 +53,6 @@
    
    #myDiv {
      display: none;
-  
    }
 h1{
      color:white;
@@ -74,26 +74,38 @@ body{
 }
 
 .location{
-     height: 30vh;
+     position:fixed;
+     left:15%;
+     height: 10vh;
      width: 50%;
+     top:20%;
      display: flex;
      justify-content: space-around;
      align-self: center;
 }
 
 .icon1{
-     padding:0;
+     position:fixed;
+     left:220px;
      height:75px;
      width:100px;
 }
 .location-timezone{
-     padding-left:0px;
+     position:fixed;
+     left:15%; 
 }
-.exact-location,icon1{
+.exact-location{
+     position:fixed;
+     height:70px;
      padding-top:20px;
-     padding-right:0px;
+     padding-left:50px;
+     position: fixed;
+
 }
 .temperature{
+     position:fixed;
+     bottom:55%;
+     right:50%;
      flex-direction: column;
 }
 
