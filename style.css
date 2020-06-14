@@ -1,6 +1,6 @@
 *{
      margin:0;
-     padding-left: 0px;
+     padding-left: 0%;
      box-sizing: border-box;
 }
 /* Center the loader */
@@ -86,9 +86,9 @@ body{
 
 .icon1{
      position:fixed;
-     left:220px;
-     height:75px;
-     width:100px;
+     left:70%;
+     height:20%;
+     width:20%;
 }
 .location-timezone{
      position:fixed;
