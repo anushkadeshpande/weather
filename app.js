@@ -40,7 +40,19 @@ function weather() {
           const proxy = "https://cors-anywhere.herokuapp.com/";
           const locate = `${proxy}http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=cf3aa3fa484d8f88b76c34b064eb484f`
           const api = `${proxy}https://api.darksky.net/forecast/fd9d9c6418c23d94745b836767721ad1/${lat},${long}?units=si`;
-
+          
+          fetch(locate)
+          .then(response => {
+               return response.json();
+          })
+          .then(data => {
+               console.log(data);
+               const loc = data.name;
+               
+               //set DOM elements from api
+               exact.textContent = loc;
+              
+          });
           fetch(api)
                .then(response => {
                     return response.json();
@@ -49,7 +61,6 @@ function weather() {
                     console.log(data);
                     const { temperature, summary, icon } = data.currently;
                     const hour = data.hourly.data;
-                    //set DOM elements from api
                     temperatureDegree.textContent = temperature;
                     locationTimezone.textContent = data.timezone;
                     temperatureDescription.textContent = summary;
@@ -58,24 +69,30 @@ function weather() {
 
                });
 
-          fetch(locate)
-               .then(response => {
-                    return response.json();
-               })
-               .then(data => {
-                    console.log(data);
-                    const loc = data.name;
-                    
-                    //set DOM elements from api
-                    exact.textContent = loc;
-                   
-               });
+          
      }
 
      function setIcons(icon, iconID) {
-          const skycons = new Skycons({ color: "white" });
+          const skycons = new Skycons({ color: "black" });
           const currentIcon = icon.replace(/-/g, "_").toUpperCase();
           skycons.play();
           return skycons.set(iconID, Skycons[currentIcon]);
      }
 }
+function time(){
+     var today = new Date();
+     var h = today.getHours()
+     if (h>12) {h= h- "12"} ;
+     var m = today.getMinutes();
+     var s = today.getSeconds();
+     m = checkTime(m);
+     s = checkTime(s);
+     document.getElementById('clocky').innerHTML =
+     h + ":" + m + ":" + s;
+     
+     var t = setTimeout(time, 500);
+     }
+     function checkTime(i) {
+     if (i < 10) {i = "0" + i};
+     return i;
+     }
