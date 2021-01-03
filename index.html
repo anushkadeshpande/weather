@@ -1,39 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <meta http-equiv="X-UA-Compatible" content="ie=edge" />
      <link rel="stylesheet" href="./style.css" />
-    
+
 </head>
-<script src="skycons.js"></script>
-<script src="app.js"></script>
+
 
 <body onload="myfun()">
      <div id="loader"></div>
      <h1 class="error"></h1>
-     <div id="myDiv" class="animate-bottom">
-
-          <div class="location">
-               <h5 class="location-timezone"></h5>
-               <h1 class="exact-location"></h1>
-          </div>
-          
-          <div class="info">
-               <canvas class="icon1"></canvas>
-               <div class="temperature">
-                    <div class="degree-section">
-                         <h2 class="temperature-degree"></h2>
-                         <span> C</span>
+     <div class="flip-card">
+          <div class="flip-card-inner">
+               <div class="flip-card-front">
+                    <div class="location">
+                         <h5 class="location-timezone"></h5>
+                         <h1 class="exact-location"></h1>
                     </div>
-                    <div class="temperature-description"></div>
+
+                    <div class="info">
+                         <canvas class="icon1"></canvas>
+                         <div class="temperature">
+                              <div class="degree-section">
+                                   <h2 class="temperature-degree"></h2>
+                                   <span> C</span>
+                              </div>
+                              <div class="temperature-description"></div>
+                         </div>
+                    </div>
                </div>
-               
+               <div class="flip-card-back">
+                    <div class="next-five-days">
+                         
+                    </div>
+               </div>
           </div>
-
-
      </div>
+     <div id="click-instruction">Click/Tap the card to see 5 day forecast</div>
 </body>
+<script src="skycons.js"></script>
+<script src="app.js"></script>
 
 </html>

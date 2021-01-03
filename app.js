@@ -1,3 +1,5 @@
+const flipCard = document.querySelector('.flip-card');
+const nextDays = document.querySelector('.next-five-days');
 window.addEventListener('load', myfun());
 
 //const funcall = document.querySelector('.myDiv');
@@ -6,8 +8,8 @@ window.addEventListener('load', myfun());
 var myVar;
 
 function myfun() {
-
-     document.getElementById("myDiv").style.display = "none";
+     flipCard.style.display = "none";
+     document.getElementById("click-instruction").style.display="none";
      myVar = setTimeout(showPage, 1);
 }
 
@@ -56,7 +58,9 @@ function weather(lat, long) {
                     //set DOM elements from api
                     exact.textContent = loc;
                     document.getElementById("loader").style.display = "none";
-                    document.getElementById("myDiv").style.display = "block";
+                    flipCard.style.display = "block";
+                    document.getElementById("click-instruction").style.display="block";
+                    setTimeout(() => {document.getElementById("click-instruction").style.display="none";}, 5000)
                });
           fetch(api)
                .then(response => {
@@ -65,11 +69,23 @@ function weather(lat, long) {
                .then(data => {
                     console.log(data);
                     const { temperature, summary, icon } = data.currently;
-                    const hour = data.hourly.data;
+                    const dailyData = data.daily.data;
+                    //const hour = data.hourly.data;
                     temperatureDegree.textContent = temperature;
                     locationTimezone.textContent = data.timezone;
                     temperatureDescription.textContent = summary;
-                    console.log(hour);
+                    //console.log(hour);
+                    console.log(dailyData);
+                    //var dailyDisplay = '';
+                    var i=0;
+                    
+                    for(i=0;i<5;i++)
+                    {
+                         const dailyTemp = document.createElement("p");
+                         var dailyDisplay = dailyData[i].summary;
+                         dailyTemp.innerHTML = dailyDisplay;
+                         nextDays.appendChild = dailyTemp;
+                    }
                     setIcons(icon, document.querySelector('.icon1'));
 
                });
@@ -78,7 +94,7 @@ function weather(lat, long) {
      }
 
      function setIcons(icon, iconID) {
-          const skycons = new Skycons({ color: "black" });
+          const skycons = new Skycons({ color: "white" });
           const currentIcon = icon.replace(/-/g, "_").toUpperCase();
           skycons.play();
           return skycons.set(iconID, Skycons[currentIcon]);
