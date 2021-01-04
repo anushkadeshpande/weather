@@ -10,9 +10,8 @@ var flag = 0;
 function myfun() {
      flipCard.style.display = "none";
      myVar = setTimeout(showPage, 1);
-    // var today = new Date();
-     //var h = today.getHours();
-     var h=5;
+     var today = new Date();
+     var h = today.getHours();
      if(h>=5 && h<=7)
          document.body.style.backgroundImage = "url('./assets/sunrise.svg')";
      else if(h>=8 && h<=16)
