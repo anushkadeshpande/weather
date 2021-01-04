@@ -102,3 +102,13 @@ body{
    .flip-card-back {
      transform: rotateY(180deg);
    }
+
+   .desc{
+        display:flex;
+   }
+   .separator{
+        margin:5px;
+   }
+   #three-day-data{
+        margin:5px;
+   }
