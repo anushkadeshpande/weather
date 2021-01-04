@@ -2,14 +2,11 @@ const flipCard = document.querySelector('.flip-card');
 const nextDays = document.querySelector('.next-five-days');
 window.addEventListener('load', myfun());
 
-//const funcall = document.querySelector('.myDiv');
-//funcall.addEventListener = ('showPage' , 'weather');
-
 var myVar;
-
+var flag = 0;
 function myfun() {
      flipCard.style.display = "none";
-     document.getElementById("click-instruction").style.display="none";
+     document.getElementById("click-instruction").style.display = "none";
      myVar = setTimeout(showPage, 1);
 }
 
@@ -22,7 +19,6 @@ function showPage() {
           long = position.coords.longitude;
           lat = position.coords.latitude;
           if (lat != 0 && long != 0) {
-               //   document.getElementById("myDiv").style.display = "block";
                weather(lat, long);
           }
           else {
@@ -59,8 +55,8 @@ function weather(lat, long) {
                     exact.textContent = loc;
                     document.getElementById("loader").style.display = "none";
                     flipCard.style.display = "block";
-                    document.getElementById("click-instruction").style.display="block";
-                    setTimeout(() => {document.getElementById("click-instruction").style.display="none";}, 5000)
+                    document.getElementById("click-instruction").style.display = "block";
+                    setTimeout(() => { document.getElementById("click-instruction").style.display = "none"; }, 5000)
                });
           fetch(api)
                .then(response => {
@@ -70,27 +66,23 @@ function weather(lat, long) {
                     console.log(data);
                     const { temperature, summary, icon } = data.currently;
                     const dailyData = data.daily.data;
-                    //const hour = data.hourly.data;
                     temperatureDegree.textContent = temperature;
                     locationTimezone.textContent = data.timezone;
                     temperatureDescription.textContent = summary;
-                    //console.log(hour);
-                    console.log(dailyData);
-                    //var dailyDisplay = '';
-                    var i=0;
-                    
-                    for(i=0;i<5;i++)
-                    {
-                         const dailyTemp = document.createElement("p");
-                         var dailyDisplay = dailyData[i].summary;
-                         dailyTemp.innerHTML = dailyDisplay;
-                         nextDays.appendChild = dailyTemp;
+
+                    var i;
+                    if (flag == 0) {
+                         for (i = 0; i < 5; i++) {
+                              const dailyTemp = document.createElement("p");
+                              var dailyDisplay = dailyData[i].summary;
+                              dailyTemp.innerHTML = dailyDisplay;
+                              nextDays.appendChild(dailyTemp);
+                         }
+                         flag = 1;
                     }
                     setIcons(icon, document.querySelector('.icon1'));
 
                });
-
-
      }
 
      function setIcons(icon, iconID) {

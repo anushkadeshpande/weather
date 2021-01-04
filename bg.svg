@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <clipPath id="clip-Web_1920_2">
+      <rect width="1920" height="1080"/>
+    </clipPath>
+  </defs>
+  <g id="Web_1920_2" data-name="Web 1920 – 2" clip-path="url(#clip-Web_1920_2)">
+    <rect width="1920" height="1080" fill="#0687c9"/>
+    <path id="Polygon_6" data-name="Polygon 6" d="M386,0,772,520H0Z" transform="translate(-87 588)" fill="#0074b1"/>
+    <path id="Polygon_1" data-name="Polygon 1" d="M386,0,772,653H0Z" transform="translate(151 443)" fill="#025c91"/>
+    <path id="Polygon_5" data-name="Polygon 5" d="M130,0,260,407H0Z" transform="translate(1486 673)" fill="#0074b1"/>
+    <path id="Polygon_2" data-name="Polygon 2" d="M461.5,0,923,714H0Z" transform="translate(772 366)" fill="#015c91"/>
+    <path id="Polygon_3" data-name="Polygon 3" d="M461.5,0,923,569H0Z" transform="translate(418 511)" fill="#1b4b7c"/>
+    <path id="Polygon_4" data-name="Polygon 4" d="M355,0,710,765H0Z" transform="translate(1551 315)" fill="#1b4b7c"/>
+    <path id="Polygon_7" data-name="Polygon 7" d="M461.5,0,923,490H0Z" transform="translate(0 618)" fill="#2e3a74"/>
+    <g id="Ellipse_1" data-name="Ellipse 1" transform="translate(604 96)" fill="#fff" stroke="#707070" stroke-width="1">
+      <ellipse cx="71" cy="74.5" rx="71" ry="74.5" stroke="none"/>
+      <ellipse cx="71" cy="74.5" rx="70.5" ry="74" fill="none"/>
+    </g>
+    <path id="Polygon_8" data-name="Polygon 8" d="M20,0l4.5,11.238L40,14.5,24.5,17.763,20,29,15.5,17.763,0,14.5l15.5-3.262Z" transform="translate(1167 147)" fill="rgba(255,255,255,0.46)"/>
+    <path id="Polygon_9" data-name="Polygon 9" d="M13.5,0l3.038,12.4L27,16,16.538,19.6,13.5,32,10.463,19.6,0,16l10.463-3.6Z" transform="translate(869 394)" fill="rgba(255,255,255,0.46)"/>
+    <path id="Polygon_10" data-name="Polygon 10" d="M13,0l2.925,9.688L26,12.5,15.925,15.312,13,25l-2.925-9.688L0,12.5,10.075,9.688Z" transform="translate(746 27)" fill="rgba(255,255,255,0.46)"/>
+    <path id="Polygon_11" data-name="Polygon 11" d="M15.5,0l3.488,8.525L31,11,18.987,13.475,15.5,22l-3.487-8.525L0,11,12.013,8.525Z" transform="translate(1455 315)" fill="rgba(255,255,255,0.46)"/>
+    <path id="Polygon_12" data-name="Polygon 12" d="M20,0l4.5,15.113L40,19.5,24.5,23.888,20,39,15.5,23.888,0,19.5l15.5-4.387Z" transform="matrix(-0.53, 0.848, -0.848, -0.53, 358.135, 78.872)" fill="rgba(255,255,255,0.46)"/>
+    <path id="Polygon_13" data-name="Polygon 13" d="M10,0l2.25,7.363L20,9.5l-7.75,2.138L10,19,7.75,11.638,0,9.5,7.75,7.362Z" transform="translate(151 245)" fill="rgba(255,255,255,0.46)"/>
+    <g id="Group_1" data-name="Group 1" transform="matrix(0.978, 0.208, -0.208, 0.978, 134.34, -247.709)">
+      <ellipse id="Ellipse_3" data-name="Ellipse 3" cx="5.016" cy="5.752" rx="5.016" ry="5.752" transform="translate(1010.194 219.456)" fill="rgba(255,255,255,0.9)"/>
+      <path id="Path_1" data-name="Path 1" d="M5.072.431,11.891,22.8l-10.1-.848Z" transform="matrix(0.788, 0.616, -0.616, 0.788, 1024.459, 201.81)" fill="rgba(255,255,255,0.75)"/>
+    </g>
+    <g id="Group_2" data-name="Group 2" transform="matrix(0.978, 0.208, -0.208, 0.978, -31.877, -256.878)">
+      <ellipse id="Ellipse_3-2" data-name="Ellipse 3" cx="4.955" cy="6.876" rx="4.955" ry="6.876" transform="translate(1010.194 221.908)" fill="rgba(255,255,255,0.9)"/>
+      <path id="Path_1-2" data-name="Path 1" d="M6.059,1.266l9.528,25.675L4.728,24.976Z" transform="matrix(0.788, 0.616, -0.616, 0.788, 1023.977, 200.222)" fill="rgba(255,255,255,0.75)"/>
+    </g>
+    <g id="Group_3" data-name="Group 3" transform="matrix(0.978, 0.208, -0.208, 0.978, -13.681, -353.865)">
+      <ellipse id="Ellipse_3-3" data-name="Ellipse 3" cx="9.795" cy="8.871" rx="9.795" ry="8.871" transform="translate(1010.194 228.17)" fill="rgba(255,255,255,0.9)"/>
+      <path id="Path_1-3" data-name="Path 1" d="M10.087-.026l7.8,36.631L-.1,37.176Z" transform="matrix(0.788, 0.616, -0.616, 0.788, 1037.374, 200.104)" fill="rgba(255,255,255,0.75)"/>
+    </g>
+  </g>
+</svg>
