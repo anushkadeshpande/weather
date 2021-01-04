@@ -1,11 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1080" viewBox="0 0 1920 1080">
   <defs>
-    <clipPath id="clip-Web_1920_3">
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#2c2662"/>
+      <stop offset="0.663" stop-color="#211d47"/>
+      <stop offset="1" stop-color="#090814"/>
+    </linearGradient>
+    <clipPath id="clip-night-sky">
       <rect width="1920" height="1080"/>
     </clipPath>
   </defs>
-  <g id="Web_1920_3" data-name="Web 1920 – 3" clip-path="url(#clip-Web_1920_3)">
-    <rect width="1920" height="1080" fill="#2c2662"/>
+  <g id="night-sky" clip-path="url(#clip-night-sky)">
+    <rect width="1920" height="1080" fill="url(#linear-gradient)"/>
     <path id="Polygon_6" data-name="Polygon 6" d="M386,0,772,435H0Z" transform="translate(-87 673)" fill="#6e4b9f"/>
     <path id="Polygon_1" data-name="Polygon 1" d="M386,0,772,568H0Z" transform="translate(151 528)" fill="#4d3f7a"/>
     <path id="Polygon_5" data-name="Polygon 5" d="M130,0,260,216H0Z" transform="translate(1486 864)" fill="#6e4b9f"/>

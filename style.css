@@ -8,11 +8,11 @@ body{
      top: 50%;
      left: 50%;
      transform: translate(-50%, -50%);
-     background: url('./bg.svg') no-repeat center center fixed;
+     background: no-repeat center center fixed;
      -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+     -moz-background-size: cover;
+     -o-background-size: cover;
+     background-size: cover;
 }
 #loader {
      border: 16px solid #f3f3f3; /* Light grey */

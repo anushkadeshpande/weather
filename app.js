@@ -1,13 +1,26 @@
 const flipCard = document.querySelector('.flip-card');
 const nextDays = document.querySelector('.next-five-days');
+
 window.addEventListener('load', myfun());
 
 var myVar;
 var flag = 0;
+
+
 function myfun() {
      flipCard.style.display = "none";
-     document.getElementById("click-instruction").style.display = "none";
      myVar = setTimeout(showPage, 1);
+    // var today = new Date();
+     //var h = today.getHours();
+     var h=5;
+     if(h>=5 && h<=7)
+         document.body.style.backgroundImage = "url('./assets/sunrise.svg')";
+     else if(h>=8 && h<=16)
+          document.body.style.backgroundImage = "url('./assets/day-sky.svg')";
+     else if(h>=17 && h<=19)
+          document.body.style.backgroundImage = "url('./assets/twilight.svg')";
+     else
+          document.body.style.backgroundImage = "url('./assets/night-sky.svg')";
 }
 
 function showPage() {
@@ -55,8 +68,6 @@ function weather(lat, long) {
                     exact.textContent = loc;
                     document.getElementById("loader").style.display = "none";
                     flipCard.style.display = "block";
-                    document.getElementById("click-instruction").style.display = "block";
-                    setTimeout(() => { document.getElementById("click-instruction").style.display = "none"; }, 5000)
                });
           fetch(api)
                .then(response => {
