@@ -8,16 +8,16 @@ var flag = 0;
 
 
 function myfun() {
-     
+
      flipCard.style.display = "none";
      myVar = setTimeout(showPage, 1);
      var today = new Date();
      var h = today.getHours();
-     if(h>=5 && h<=7)
-         document.body.style.backgroundImage = "url('./assets/sunrise.svg')";
-     else if(h>=8 && h<=17)
+     if (h >= 5 && h <= 7)
+          document.body.style.backgroundImage = "url('./assets/sunrise.svg')";
+     else if (h >= 8 && h <= 17)
           document.body.style.backgroundImage = "url('./assets/day-sky.svg')";
-     else if(h>=18 && h<=19)
+     else if (h >= 18 && h <= 19)
           document.body.style.backgroundImage = "url('./assets/twilight.svg')";
      else
           document.body.style.backgroundImage = "url('./assets/night-sky.svg')";
@@ -47,9 +47,9 @@ function weather(lat, long) {
      let temperatureDegree = document.querySelector(".temperature-degree");
      let locationTimezone = document.querySelector(".location-timezone");
      let exact = document.querySelector(".exact-location");
-     
-     const days=["Sun","Mon","Tue","Wed","Thurs","Fri","Sat"];
-     const months = ["Jan","Feb","Mar","Apr","May","June","July","Aug","Sep","Oct","Nov","Dec"];
+
+     const days = ["Sun", "Mon", "Tue", "Wed", "Thurs", "Fri", "Sat"];
+     const months = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sep", "Oct", "Nov", "Dec"];
      if (navigator.geolocation) {
 
           const proxy = "https://cors-anywhere.herokuapp.com/";
@@ -61,7 +61,6 @@ function weather(lat, long) {
                     return response.json();
                })
                .then(data => {
-               //     console.log(data);
                     const loc = data.name;
 
                     //set DOM elements from api
@@ -74,7 +73,6 @@ function weather(lat, long) {
                     return response.json();
                })
                .then(data => {
-                 //   console.log(data);
                     const { temperature, summary, icon } = data.currently;
                     const dailyData = data.daily.data;
                     temperatureDegree.textContent = temperature;
@@ -83,14 +81,15 @@ function weather(lat, long) {
 
                     var today = new Date();
                     var tomorrow = new Date(today);
-                    tomorrow.setDate(tomorrow.getDate()+1);
+                    tomorrow.setDate(tomorrow.getDate() + 1);
                     var dayAfterTom = new Date(tomorrow);
-                    dayAfterTom.setDate(dayAfterTom.getDate()+1);
-                   // console.log(dayAfterTom);
-                var dayAfter = new Date(dayAfterTom);
-                dayAfter.setDate(dayAfter.getDate()+1);
-                    var dates=[tomorrow,dayAfterTom,dayAfter];  
+                    dayAfterTom.setDate(dayAfterTom.getDate() + 1);
+                    
+                    var dayAfter = new Date(dayAfterTom);
+                    dayAfter.setDate(dayAfter.getDate() + 1);
+                    var dates = [tomorrow, dayAfterTom, dayAfter];
                     var i;
+                    
                     if (flag == 0) {
                          for (i = 0; i < 3; i++) {
                               const dailyTemp = document.createElement("div");
@@ -99,37 +98,36 @@ function weather(lat, long) {
                               desc.classList.add("desc");
                               const dailyTempDesc = document.createElement("h3");
                               const dailyTempIcon = document.createElement("canvas");
-                              
+
                               const highLow = document.createElement("div");
-                            
+
                               const highTemp = document.createElement("h4");
                               const lowTemp = document.createElement("h4");
                               const sep = document.createElement("hr");
                               sep.classList.add("separator");
-                              day.innerHTML=days[dates[i].getDay()] + ', ' + dates[i].getDate() + ' ' + months[dates[i].getMonth()];
+                              day.innerHTML = days[dates[i].getDay()] + ', ' + dates[i].getDate() + ' ' + months[dates[i].getMonth()];
                               dailyTempDesc.innerHTML = dailyData[i].summary;
-                              dailyTempIcon.style.height="4vh";
-                              setIcons(icon,dailyTempIcon);
-                              highTemp.innerHTML ="↑  " + dailyData[i].temperatureHigh + " ";
-                              lowTemp.innerHTML ="↓  " + dailyData[i].temperatureLow + " ";
-                              
+                              dailyTempIcon.style.height = "4vh";
+                              setIcons(icon, dailyTempIcon);
+                              highTemp.innerHTML = "↑  " + dailyData[i].temperatureHigh + " ";
+                              lowTemp.innerHTML = "↓  " + dailyData[i].temperatureLow + " ";
+
                               dailyTemp.appendChild(day);
                               dailyTemp.appendChild(desc);
                               desc.appendChild(dailyTempIcon);
                               desc.appendChild(dailyTempDesc);
-                              
+
                               highLow.appendChild(highTemp);
                               highLow.appendChild(lowTemp);
                               dailyTemp.appendChild(highLow);
-                              if(i!=2)
-                              dailyTemp.appendChild(sep);
-                              
+                              if (i != 2)
+                                   dailyTemp.appendChild(sep);
+
                               nextDays.appendChild(dailyTemp);
                          }
                          flag = 1;
                     }
                     setIcons(icon, document.querySelector('.icon1'));
-
                });
      }
 
